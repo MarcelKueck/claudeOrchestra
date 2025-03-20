@@ -8,11 +8,21 @@ ClaudeOrchestra is a personal development tool that orchestrates multiple specia
 
 Rather than interacting with a single general-purpose Claude instance, ClaudeOrchestra lets you interact with specialized "agents" - each with optimized prompts for specific roles in the software development lifecycle:
 
-- Product Manager Agent: Requirements gathering and feature prioritization
-- System Architect Agent: Technical design and technology selection
-- Developer Agent: Implementation and coding
-- QA Agent: Testing and quality assurance
-- Technical Writer Agent: Documentation generation
+### Strategic Agents
+- **Product Manager Agent**: Requirements gathering and feature prioritization
+- **System Architect Agent**: Technical design and technology selection
+- **Project Manager Agent**: Task breakdown and coordination
+
+### Development Agents
+- **Frontend Developer Agent**: UI/UX implementation
+- **Backend Developer Agent**: API and service implementation
+- **Database Engineer Agent**: Schema design and data management
+- **DevOps Engineer Agent**: Deployment and infrastructure
+
+### Quality Agents
+- **QA Agent**: Testing and quality assurance
+- **Security Engineer Agent**: Security assessment and implementation
+- **Technical Writer Agent**: Documentation generation
 
 The system maintains context between agent interactions and preserves knowledge across the project lifecycle.
 
@@ -55,22 +65,52 @@ Here's how a typical workflow operates:
    $ co agent architect my-project "Design system architecture"
    ```
 
-4. **Implementation** (Developer Agent):
+4. **Database Design** (Database Engineer Agent):
    ```bash
-   $ co agent developer my-project "Implement user authentication"
+   $ co agent db my-project "Design database schema"
    ```
 
-5. **Test Planning** (QA Agent):
+5. **API Development** (Backend Developer Agent):
+   ```bash
+   $ co agent backend my-project "Implement user authentication API"
+   ```
+
+6. **Frontend Implementation** (Frontend Developer Agent):
+   ```bash
+   $ co agent frontend my-project "Create login interface"
+   ```
+
+7. **Security Review** (Security Engineer Agent):
+   ```bash
+   $ co agent security my-project "Review authentication implementation"
+   ```
+
+8. **Deployment Configuration** (DevOps Engineer Agent):
+   ```bash
+   $ co agent devops my-project "Create deployment pipeline"
+   ```
+
+9. **Test Planning** (QA Agent):
    ```bash
    $ co agent qa my-project "Create test plan for authentication"
    ```
 
-6. **Documentation** (Technical Writer Agent):
-   ```bash
-   $ co agent writer my-project "Document the API"
-   ```
+10. **Documentation** (Technical Writer Agent):
+    ```bash
+    $ co agent writer my-project "Document the API"
+    ```
 
-## Personal Development Benefits
+## Scaling for Project Complexity
+
+ClaudeOrchestra is designed to scale with your project needs:
+
+1. **Personal Projects**: For small personal projects, you might only use a few agents (PM, Developer, QA)
+
+2. **Professional Applications**: For more complex applications, add specialized agents (Frontend, Backend, Database)
+
+3. **Enterprise Solutions**: For enterprise-grade projects, utilize the full suite of specialized agents with robust knowledge management
+
+## Benefits
 
 1. **Specialized Expertise**: Access to different perspectives and specialized knowledge
 2. **Coherent Projects**: Maintain consistency across complex projects
